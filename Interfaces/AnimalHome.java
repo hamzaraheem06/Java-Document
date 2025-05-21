@@ -28,6 +28,7 @@ public class AnimalHome {
         // Tommy is moving.
         // Animal makes sound.
 
+        dog.sound();
         
 
     }    

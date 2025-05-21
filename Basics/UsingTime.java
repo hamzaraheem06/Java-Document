@@ -14,6 +14,9 @@ public class UsingTime {
         // to set custom time value, use .of(h, m) or .of(h, m, s) or .of(h, m, s, ms) method
 
         LocalTime cutOffTime = LocalTime.of(23, 59, 59);
+
+        LocalTime time = LocalTime.parse(("12:15:50"));
+        System.out.println(time);
         // System.out.println(cutOffTime); // 23:59:59
 
         // plus and minus in time variables are also done using similar methods as in LocalDate

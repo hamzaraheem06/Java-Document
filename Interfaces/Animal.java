@@ -24,12 +24,13 @@ public interface Animal {
     }
     // note: However, these methods are not inherited by the implementation class. These are contained only in the interface they are defined in.
 
-    // define: an interface can also have default methods: These are concrete methods that are inherited by the implementation classes. Since we cannot define body of an abstract method, we use the keyword default with the method declaration to make it default method. We can define the body of a default method inside an interface. 
+    // define: an interface can also have default methods: These are concrete methods that are inherited by the implementation classes. Since we cannot define body of an abstract method, we use the keyword default with the method declaration to make it a concrete method. We can define the body of a default method inside an interface. These methods are created for the instances of the classes that implement this interface. 
     
     default void sound() {
+        info();
         this.move();
         System.out.println("Animal makes sound.");
     }
     // note: These are defined for the object of implemented class.
-    // we can other interface methods inside a default method, unless the called method is static. This is due to statement we wrote just above this line. We will access the methods for the object using this keyword.
+    // we can access other interface methods (concrete as well as abstract methods) inside a default method, unless the called method is static. This is due to statement we wrote just above this line. We will access the methods for the object using this keyword.
 }
